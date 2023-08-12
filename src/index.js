@@ -4,6 +4,9 @@ import mongoose from "mongoose";
 import { userRouter } from "./routes/users.js";
 import { recipesRouter } from "./routes/recipes.js";
 
+import dotenv from 'dotenv'
+dotenv.config({ path: './.env' })
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 app.use(express.json());
